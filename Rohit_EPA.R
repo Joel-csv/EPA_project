@@ -10,3 +10,9 @@ data = read.csv("weather.csv")
 object = read.csv("empire.csv")
 pm25_ug = read.csv("pm25ug_new.csv") 
 emp.25 = read.csv("emp.25.csv") 
+
+df$date = dmy_hm(df$date)
+str(df)
+
+ggplot(df, aes(x= date, y = nox_UG)) +
+  geom_line(color = "blue")
